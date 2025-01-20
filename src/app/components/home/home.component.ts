@@ -3,7 +3,7 @@ import { BackgroundComponent } from '../background/background.component';
 
 @Component({
   selector: 'app-home',
-  imports: [BackgroundComponent],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

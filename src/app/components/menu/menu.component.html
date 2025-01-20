@@ -1,24 +1,7 @@
 <nav class="header-container__nav" role="navigation">
   <ul class="header-container__nav__menu">
-    <li class="header-container__nav__menu__item">
-      <button class="header-container__nav__menu__item__link" aria-expanded="false" aria-modal="true"
-        aria-controls="search-modal">Wearable</button>
-    </li>
-    <li class="header-container__nav__menu__item">
-      <button class="header-container__nav__menu__item__link" aria-haspopup="dialog" aria-expanded="false"
-        aria-controls="search-modal">Neural</button>
-    </li>
-    <li class="header-container__nav__menu__item">
-      <button class="header-container__nav__menu__item__link" aria-haspopup="dialog" aria-expanded="false"
-        aria-controls="search-modal">Programs</button>
-    </li>
-    <li class="header-container__nav__menu__item">
-      <button class="header-container__nav__menu__item__link" aria-haspopup="dialog" aria-expanded="false"
-        aria-controls="search-modal">Updates</button>
-    </li>
-    <li class="header-container__nav__menu__item">
-      <button class="header-container__nav__menu__item__link" aria-haspopup="dialog" aria-expanded="false"
-        aria-controls="search-modal">Search</button>
-    </li>
+    @for (item of menuItems(); track item.id) { <li class="header-container__nav__menu__item"> <button
+        class="header-container__nav__menu__item__link" aria-expanded="false" aria-modal="true"
+        aria-controls="search-modal" (click)="handleClick(item)"> {{ item.name }} </button> </li>}
   </ul>
 </nav>
