@@ -10,24 +10,24 @@
   flex-wrap: nowrap;
   background: variables.$color-background;
 
-  & .description__head {
+  &__head {
     display: flex;
     flex-direction: column;
     font-size: 12px;
     width: 214px;
     height: 170px;
 
-    &--text1 {
+    &__text1 {
       color: variables.$color-secondary;
       opacity: 0.5;
     }
-    &--texto2 {
+    &__texto2 {
       filter: blur(0px);
       opacity: 1;
       visibility: inherit;
     }
   }
-  & .description__content {
+  &__content {
     width: 461.84px;
     height: 170.91px;
     font-size: 25px;
@@ -41,18 +41,19 @@
     animation-name: mymoveabove;
     animation-duration: 1s;
     transition: opacity 1s ease-in-out, filter 1s ease-in-out,
-      transform 1s ease-in-out;
+    transform 1s ease-in-out;
     & .visible {
       opacity: 1;
       animation: mymoveabove 1s forwards;
     }
-    &--text-dinamico {
+    &__text-dinamico {
       color: variables.$color-primary;
       font-size: 25px;
       position: relative;
       width: 100%;
 
-      & .text-slide {
+      &__text-slide {
+        display: inline-block;
         position: absolute;
         top: 0;
         left: 0;
@@ -61,13 +62,15 @@
         width: 100%;
         transition: opacity 1s, filter 2s;
 
-        &.show {
+        & .show {
+          display: inline-block;
           opacity: 1;
           filter: blur(0);
           z-index: 2;
           transition: opacity 1s, filter 1s;
         }
-        &.hide {
+        & .hide {
+          display: none;
           opacity: 0;
           filter: blur(10px);
           z-index: 1;
@@ -75,51 +78,65 @@
       }
     }
 
-    &--link {
+    &__link {
       @include mixin.container(flex-start);
       width: 200px;
+
+      &__icon {
+        @include mixin.container(flex-start);
+        width: 200px;
+        gap: 16px;
+        text-decoration: none;
+        border: 1 solid #0071e3;
+        &__icono {
+          @include mixin.container(center);
+          border: 1px solid #0071e3;
+          width: 22px;
+          height: 14px;
+          border-radius: 20px 20px;
+
+        }
+        &__text-link {
+          text-decoration: none;
+          color: #0071e3;
+          font-size: 14px;
+        }
+
+      }
+
+      }
+
     }
-    &--link a {
-      @include mixin.container(flex-start);
-      width: 200px;
-      gap: 16px;
+    &__scroll-button {
+      display: none;
+      background: variables.$color-primary;
+      color: variables.$color-secondary;
+      border: none;
+      width: 56px;
+      height: 32px;
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 2px;
+      z-index: 1000;
+      transition: opacity 0.5s;
     }
-    &--link .icono {
-      @include mixin.container(center);
-      border: 1px solid #0071e3;
-      width: 22px;
-      height: 14px;
-      border-radius: 20px 20px;
+    .scroll__button.show {
+      display: block;
+      opacity: 1;
     }
   }
 
-  & .description__link .icon {
-    text-decoration: none;
-    border: 1 solid #0071e3;
+
+@keyframes mymoveabove {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
   }
-  a {
-    text-decoration: none;
-    color: #0071e3;
-    font-size: 14px;
-  }
-  & .scroll__button {
-    display: none;
-    background: variables.$color-primary;
-    color: variables.$color-secondary;
-    border: none;
-    width: 56px;
-    height: 32px;
-    position: fixed;
-    top: 50%;
-    left: 20px;
-    border-radius: 2px;
-    cursor: pointer;
-    padding: 2px;
-    z-index: 1000;
-    transition: opacity 0.5s;
-  }
-  .scroll__button.show {
-    display: block;
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
