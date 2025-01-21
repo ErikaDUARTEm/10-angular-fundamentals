@@ -26,6 +26,18 @@
     &__icon {
       fill: variables.$color-secondary;
       transition: fill 0.3s ease;
+      width: 24px;
+      height: 24px;
+
+      svg{
+        width: 24px;
+        height: 24px;
+
+        use{
+          width: 24px;
+          height: 24px;
+        }
+      }
 
       .white-fill {
         fill: variables.$color-background;

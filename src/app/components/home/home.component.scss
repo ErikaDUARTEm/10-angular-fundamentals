@@ -36,13 +36,13 @@
       text-decoration: none;
       animation: menuSlideDown 3s ease-out;
 
-      &--text {
+      &__text {
         transition: filter 1s ease;
         &:hover {
           animation: blurAnimation 1s forwards;
         }
       }
-      &--icons {
+      &__icons {
         @include mixin.container(center);
         border: 1px solid;
         border-radius: 6.3rem;

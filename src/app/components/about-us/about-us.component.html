@@ -10,35 +10,19 @@
     </div>
     <div class="list__content">
       <ul>
+        @for (item of headItems(); track item.id) {
         <li class="head">
           <div class="head__number">
-            <span>01</span>
-            <span>Our Mission</span>
+            <span>{{item.number}}</span>
+            <span>{{item.title}}</span>
           </div>
           <div class="head__titles">
-            <span>Make humans better—a lot better</span>
-            <span class="item-head-line"></span>
+            <span>{{item.description}}</span>
+            <span [class]="{'item-head-line': item.hasLine}"></span>
           </div>
         </li>
-        <li class="head">
-          <div class="head__number">
-            <span>02</span>
-            <span>Our Vision</span>
-          </div>
-          <div class="head__titles">
-            <span>Lead the future of Invisible Computing </span>
-            <span class="item-head-line"></span>
-          </div>
-        </li>
-        <li class="head">
-          <div class="head__number">
-            <span>03</span>
-            <span>Our Ambition</span>
-          </div>
-          <div class="head__titles">
-            <span>Simplify Heads-Up Computing </span>
-          </div>
-        </li>
+      }
+
       </ul>
     </div>
   </div>
