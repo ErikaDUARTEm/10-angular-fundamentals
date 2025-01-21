@@ -104,26 +104,50 @@
     width: 18px;
     height: 40px;
     display: flex;
+  }
+}
+@keyframes menuSlideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-    & .scroll-indicator {
-      width: 18px;
-      height: 40px;
-      border-radius: 30px;
-      border-color: variables.$color-background-light;
-      position: relative;
-      overflow: hidden;
-    }
-    & .scroll-indicator .icon {
-      position: absolute;
-      right: -0.5rem;
-      top: 50%;
-      width: 2.2rem;
-      cursor: pointer;
-    }
-    & .scroll-indicator .icon:hover {
-      animation: mymove2 1s;
-      animation-timing-function: linear;
-      -webkit-animation: mymove2 1s;
-    }
+@keyframes mymove {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 20px;
+  }
+  100% {
+    left: 200px;
+  }
+}
+@keyframes backgroundZoomIn {
+  0% {
+    background-size: 110%;
+    opacity: 0;
+  }
+  100% {
+    background-size: 100%;
+    opacity: 1;
+  }
+}
+@keyframes blurAnimation {
+  0% {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+  }
+  50% {
+    filter: blur(1px);
+  }
+  100% {
+    filter: blur(0);
+    -webkit-filter: blur(0);
   }
 }

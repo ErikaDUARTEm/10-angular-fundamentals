@@ -23,7 +23,7 @@
     color: variables.$color-secondary;
     background-color: variables.$color-background-light;
 
-    & .icon {
+    &__icon {
       fill: variables.$color-secondary;
       transition: fill 0.3s ease;
 
@@ -33,6 +33,18 @@
       .black-fill {
         fill: variables.$color-secondary;
       }
+
     }
+
+  }
+}
+@keyframes menuSlideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

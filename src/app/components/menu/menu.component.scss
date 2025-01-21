@@ -1,8 +1,7 @@
 @use "../../ui/styles/variables.scss" as variables;
 @use "../../ui/styles/mixins.scss" as mixin;
 
-
-.header-container__nav{
+.header-container__nav {
   @include mixin.container(center);
   width: 494.31px;
   height: 45px;
@@ -45,6 +44,4 @@
       }
     }
   }
-
 }
-

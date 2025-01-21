@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { BackgroundComponent } from '../background/background.component';
+import { ButtonScrollComponent } from '../button-scroll/button-scroll.component';
+
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [ ButtonScrollComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

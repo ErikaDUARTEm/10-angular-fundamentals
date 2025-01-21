@@ -1,38 +1,7 @@
-<section class="description-container description-container--light-bg">
-  <article class="description-container__head">
-    <span class="description-container__head__text1">Overview</span>
-    <span class="description-container__head__text2"> What’s Augen</span>
-  </article>
-  <article class="description-container__content">
-    <div>
-      <span class="description-container__content__text1 ">Augen is the first-of-its-kind AI Wearable</span>
-      <span class="description-container__content__text1"> Company bringing general-purpose devices </span>
-    </div>
-    <span class="description-container__content__text-dinamico">
-      @for ( slide of slides; track slide.id) {
-        <span [class]="getClass(slides.indexOf(slide))" class="description-container__content__text-dinamico__text-slide">
-        {{slide.text }} </span>
-      }
-    </span>
-    <div class="description-container__content__link">
-      <a href="#" class="description-container__content__link__icon">
-        <span class="description-container__content__link__icon__icono">
-          <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-            class="icon" data-v-8e98293e=""
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M6.18252 2.51959L4.71493 1.05199L5.19807 0.568848L7.30658 2.67736L7.54815 2.91893L7.30658 3.1605L5.19807 5.26902L4.71493 4.78588L6.29795 3.20285H0.972656V2.51959H6.18252Z"
-              fill="currentColor"></path>
-          </svg>
-        </span>
-        <span class="description-container__content__link__icon__text-link">Join our community</span>
-      </a>
-    </div>
-  </article>
-  <button id="scrollButton" class="description-container__scroll-button" aria-label="Go to homepage">
-    <i aria-hidden="true">
-      <svg data-v-4b5b0323="" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-        class="icon">
+<section class="container__meet  container__meet--light-bg">
+  <section class="container__meet__section-head">
+    <div class="container__meet__section-head__icon-wrapper"><svg width="19" height="20" viewBox="0 0 19 20" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
         <path
           d="M6.20742 9.02441H0.12651C0.0566404 9.02441 0 9.08105 0 9.15092V9.85095C0 9.92081 0.0566404 9.97745 0.12651 9.97745H6.20742C6.27728 9.97745 6.33392 9.92081 6.33392 9.85095V9.15092C6.33392 9.08105 6.27728 9.02441 6.20742 9.02441Z"
           fill="currentColor"></path>
@@ -52,7 +21,53 @@
           d="M10.99 8.68324C10.99 8.68467 10.9917 8.68538 10.9927 8.68437L16.5058 3.17128C16.5564 3.12067 16.5564 3.04477 16.5058 2.99417L16.0166 2.50499C15.966 2.45439 15.8901 2.45439 15.8395 2.50499L10.9394 7.40514L10.661 7.68346C10.2309 8.1136 9.98633 8.69554 9.98633 9.30279V9.69918C9.98633 10.3064 10.2309 10.8884 10.661 11.3185L10.9394 11.5968L15.8395 16.497C15.8901 16.5476 15.966 16.5476 16.0166 16.497L16.5058 16.0078C16.5564 15.9572 16.5564 15.8813 16.5058 15.8307L11.1063 10.4312C11.029 10.3539 10.9309 10.2724 10.9309 10.1631V8.83048C10.9309 8.77311 10.9548 8.7237 10.9871 8.68226C10.9881 8.68106 10.99 8.68172 10.99 8.68324Z"
           fill="currentColor"></path>
       </svg>
-    </i>
-
-  </button>
+    </div>
+    <span class="container__meet__section-head__label">Meet Our</span>
+  </section>
+  <section class="container__meet__section-product">
+    <div class="container__meet__section-product__title">
+      <span class="container__meet__section-product__title__part-one">Invisible</span>
+      <span class="container__meet__section-product__title__part-two">Approach</span>
+    </div>
+    <div class="container__meet__section-product__img">
+      <img
+        src="https://a.storyblok.com/f/274239/2142x2141/68fc345e5e/a1-sense.png/m/240x240/filters:format(webp):quality(70)"
+        alt="imagen de nuestro producto">
+    </div>
+  </section>
+  <article class="container__meet__container-content">
+    <div class="container__meet__container-content__content2">
+      <span class="container__meet__container-content__content2__text">
+        <div class="container__meet__container-content__content2__text-one">
+          We’re currently in Research &amp; Development
+        </div>
+        <div class="container__meet__container-content__content2__text-two">
+          phase on two innovative devices that will</div>
+      </span>
+      <span class="container__meet__container-content__content2__text-three">
+        <div>
+          Enhance everyday life.
+        </div>
+      </span>
+    </div>
+  </article>
+  <article class="container__meet__links-wrapper">
+    <span class="container__meet__links-wrapper__label">Explore in depth</span>
+    <span class="container__meet__links-wrapper__links">
+      <a href="#a1-sense">
+        <div class="pill blue filled">
+          <span>A¹ Sense</span>
+          <span aria-hidden="true">A¹
+            Sense
+          </span>
+        </div>
+      </a>
+      <a href="#b1-eye">
+        <div class="pill blue">
+          <span >B¹ Eye </span>
+          <span aria-hidden="true" >B¹ Eye</span>
+        </div>
+      </a>
+    </span>
+  </article>
 </section>

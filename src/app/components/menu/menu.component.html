@@ -1,7 +1,11 @@
 <nav class="header-container__nav" role="navigation">
   <ul class="header-container__nav__menu">
-    @for (item of menuItems(); track item.id) { <li class="header-container__nav__menu__item"> <button
+    @for (item of menuItems(); track item.id) {
+       <li class="header-container__nav__menu__item">
+        <button
         class="header-container__nav__menu__item__link" aria-expanded="false" aria-modal="true"
-        aria-controls="search-modal" (click)="handleClick(item)"> {{ item.name }} </button> </li>}
+        aria-controls="search-modal" (click)="handleClick(item)"> {{ item.name }}
+      </button>
+       </li>}
   </ul>
 </nav>
